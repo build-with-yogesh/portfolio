@@ -9,6 +9,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    .light-mode {
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .light-mode .skill-card,
+    .light-mode .project-card,
+    .light-mode footer {
+      background: #ffffff;
+      color: #0f172a;
+      border-color: #cbd5e1;
+    }
+
+    .light-mode header {
+      background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+    }
+
+    .light-mode p,
+    .light-mode h2 {
+      color: #1e293b;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
     * {
       margin: 0;
       padding: 0;
@@ -174,6 +208,9 @@
 <body>
 
   <header>
+    <button id="themeToggle" class="btn" style="position:absolute; top:20px; right:20px;">
+      ☀️ Light Mode
+    </button>
     <h1>Hi, I'm Yogesh 👋</h1>
     <h2>Java Developer | Spring Boot Developer | REST API Developer</h2>
 
@@ -186,10 +223,11 @@
     <div>
       <a href="#projects" class="btn">View Projects</a>
       <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="btn">GitHub</a>
+      <a href="resume.pdf" download class="btn">📄 Download Resume</a>
     </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2 class="section-title">About Me</h2>
 
     <div class="about">
@@ -202,7 +240,7 @@
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="fade-in">
     <h2 class="section-title">Skills</h2>
 
     <div class="skills">
@@ -219,7 +257,7 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2 class="section-title">Projects</h2>
 
     <div class="projects">
@@ -267,9 +305,160 @@
     </div>
   </section>
 
+  <section id="ai-projects" class="fade-in">
+    <h2 class="section-title">AI Projects</h2>
+
+    <div class="projects">
+      <div class="project-card">
+        <h3>🤖 AI Chat Assistant</h3>
+        <p>
+          AI-powered assistant built using APIs and modern AI tools for productivity.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🧠 Smart Recommendation System</h3>
+        <p>
+          Recommendation engine using AI concepts and backend APIs.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="fade-in">
+    <h2 class="section-title">Blog</h2>
+
+    <div class="projects">
+      <div class="project-card">
+        <h3>✍️ Building Scalable REST APIs</h3>
+        <p>
+          Best practices for creating scalable APIs using Spring Boot.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="project-card">
+        <h3>⚡ Flutter Performance Tips</h3>
+        <p>
+          Optimizing Flutter applications for better performance.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="flutter-demos" class="fade-in">
+    <h2 class="section-title">Flutter Project Demos</h2>
+
+    <div class="projects">
+      <div class="project-card">
+        <h3>📱 Customer Management App</h3>
+        <p>
+          Flutter web/mobile app with authentication and dashboard UI.
+        </p>
+        <a href="#" class="btn">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="github-stats" class="fade-in">
+    <h2 class="section-title">GitHub Stats</h2>
+
+    <div class="contact">
+      <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=tokyonight" width="400">
+      <br><br>
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=tokyonight" width="400">
+    </div>
+  </section>
+
+  <section id="contact-form" class="fade-in">
+    <h2 class="section-title">Contact Form</h2>
+
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required style="padding:12px; width:300px; margin:10px; border-radius:10px; border:none;">
+        <br>
+        <input type="email" placeholder="Your Email" required style="padding:12px; width:300px; margin:10px; border-radius:10px; border:none;">
+        <br>
+        <textarea placeholder="Your Message" rows="5" style="padding:12px; width:300px; margin:10px; border-radius:10px; border:none;"></textarea>
+        <br>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+    <section id="ai-chatbot" class="fade-in">
+    <h2 class="section-title">AI Chat Assistant</h2>
+
+    <div style="max-width:700px; margin:auto; background:#1e293b; padding:25px; border-radius:20px; border:1px solid #334155;">
+
+      <div id="chatBox" style="height:300px; overflow-y:auto; background:#0f172a; padding:15px; border-radius:15px; margin-bottom:20px; text-align:left;">
+        <p><strong>AI Assistant:</strong> Hi 👋 Ask me about Yogesh, projects, skills, or experience.</p>
+      </div>
+
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Ask something..."
+        style="width:100%; padding:14px; border-radius:12px; border:none; margin-bottom:15px;"
+      />
+
+      <button class="btn" onclick="sendMessage()">Send</button>
+    </div>
+  </section>
+
   <footer>
     <p>© 2026 Yogesh | Built with HTML & CSS 🚀</p>
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const chatBox = document.getElementById('chatBox');
+      const message = input.value.trim();
+
+      if (message === '') return;
+
+      chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+
+      let response = 'Thanks for your message!';
+
+      const msg = message.toLowerCase();
+
+      if (msg.includes('skills')) {
+        response = 'Yogesh works with Java, Spring Boot, REST APIs, Flutter, Kafka, Redis, PostgreSQL, and Microservices.';
+      } else if (msg.includes('project')) {
+        response = 'Yogesh has worked on Flutter apps, Spring Boot APIs, CSV bulk loaders, and microservices projects.';
+      } else if (msg.includes('ai')) {
+        response = 'Yogesh is currently learning AI Engineering, AI tools, and System Design.';
+      } else if (msg.includes('contact')) {
+        response = 'You can connect using GitHub, LinkedIn, or Email from the contact section below.';
+      } else if (msg.includes('flutter')) {
+        response = 'Yogesh builds Flutter applications for web and mobile platforms.';
+      }
+
+      setTimeout(() => {
+        chatBox.innerHTML += `<p><strong>AI Assistant:</strong> ${response}</p>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }, 500);
+
+      input.value = '';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+
+      if (document.body.classList.contains('light-mode')) {
+        toggleBtn.innerText = '🌙 Dark Mode';
+      } else {
+        toggleBtn.innerText = '☀️ Light Mode';
+      }
+    });
+  </script>
 
 </body>
 </html>
