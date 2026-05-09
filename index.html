@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogesh | Java & Spring Boot Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #111827, #1e293b);
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      color: #60a5fa;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 700px;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+      margin: 10px;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #60a5fa;
+      text-align: center;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+      color: #cbd5e1;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid #334155;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: #60a5fa;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      transition: 0.3s;
+      border: 1px solid #334155;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #60a5fa;
+    }
+
+    .project-card h3 {
+      margin-bottom: 15px;
+      color: #60a5fa;
+    }
+
+    .project-card p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-links {
+      margin-top: 30px;
+    }
+
+    .contact-links a {
+      margin: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111827;
+      color: #94a3b8;
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      header h2 {
+        font-size: 1.2rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hi, I'm Yogesh 👋</h1>
+    <h2>Java Developer | Spring Boot Developer | REST API Developer</h2>
+
+    <p>
+      Passionate backend developer building scalable applications using Java,
+      Spring Boot, Microservices, Flutter, and AI tools.
+      Currently learning System Design and AI Engineering.
+    </p>
+
+    <div>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="btn">GitHub</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+      <p>
+        I am a Java & Spring Boot developer focused on backend systems,
+        REST APIs, and scalable microservices architecture.
+        I enjoy learning modern technologies like Flutter, Redis,
+        Kafka, AI tools, and System Design.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills">
+      <div class="skill-card">Java</div>
+      <div class="skill-card">Spring Boot</div>
+      <div class="skill-card">REST APIs</div>
+      <div class="skill-card">Microservices</div>
+      <div class="skill-card">Flutter</div>
+      <div class="skill-card">PostgreSQL</div>
+      <div class="skill-card">Redis</div>
+      <div class="skill-card">Kafka</div>
+      <div class="skill-card">Docker</div>
+      <div class="skill-card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>📌 Task Manager App</h3>
+        <p>
+          Flutter application with authentication, task management,
+          local database support, and REST API integration.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>📌 CSV Bulk Loader</h3>
+        <p>
+          Spring Boot project for loading CSV files into PostgreSQL using
+          dynamic mapping and batch processing.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>📌 Microservices Event System</h3>
+        <p>
+          Event-driven microservices communication using Kafka and Spring Boot.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact">
+      <p>Let's connect and build something amazing 🚀</p>
+
+      <div class="contact-links">
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" class="btn" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" class="btn" target="_blank">LinkedIn</a>
+        <a href="mailto:YOUR_EMAIL@gmail.com" class="btn">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Yogesh | Built with HTML & CSS 🚀</p>
+  </footer>
+
+</body>
+</html>
